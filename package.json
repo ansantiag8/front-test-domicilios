@@ -1,0 +1,59 @@
+{
+  "name": "front-test-domicilios",
+  "version": "1.0.0",
+  "description": "Prueba de desarrollo front para domicilios.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiag8/front-test-domicilios.git"
+  },
+  "author": "Santiago Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiag8/front-test-domicilios/issues"
+  },
+  "homepage": "https://github.com/santiag8/front-test-domicilios#readme",
+  "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.6.4",
+      "angular-resource": "github:angular/bower-angular-resource@^1.6.4",
+      "angular-ui-router": "github:angular-ui/angular-ui-router-bower@^1.0.1",
+      "text": "github:systemjs/plugin-text@^0.0.9"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "vinyl-paths": "^2.1.0"
+  }
+}
