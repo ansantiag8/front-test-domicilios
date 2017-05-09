@@ -1,7 +1,18 @@
 import formAuthentication from './primary-authentication.html!text'
 
-let controller = function () {
+let controller = function ($state, sessionStorage) {
   let self = this
+
+  self.name = ''
+
+  self.login = () => {
+    if (self.name !== '') {
+      sessionStorage.set('name', self.name)
+      $state.go('publications')
+    } else {
+      console.log(`Se debe ingresar un nombre`)
+    }
+  }
 
   // self.authenticate = authenticate
   // self.restorePassword = restorePassword
@@ -82,6 +93,8 @@ let controller = function () {
 
 export default {
   controller: [
+    '$state',
+    'sessionStorage',
     controller
   ],
   template: formAuthentication

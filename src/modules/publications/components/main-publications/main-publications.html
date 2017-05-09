@@ -1,0 +1,46 @@
+<header class="main-header">
+  <h2 class="no-margin width-12 align-center">Domicilios Test</h2>
+  <h3 class="no-margin align-absolute ra-horizontal">Hola! {{$ctrl.name.split(' ')[0]}}</h3>
+</header>
+
+<section class="publications align-absolute ca-horizontal">
+  <section class="card new-publication">
+    <form>
+      <fieldset>
+        <div class="field">
+          <input type="text" name="" value="" placeholder="Escribe tu estado" ng-model="$ctrl.publication">
+        </div>
+      </fieldset>
+      <div class="row buttons align-right">
+        <div class="width-12">
+          <button class="button" type="button" ng-click="$ctrl.publicate()">Publicar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section ng-repeat="pub in $ctrl.publications" class="card old-publications">
+    <figure class="no-margin">
+      <img src="../images/user.png" alt="">
+    </figure>
+    <section class="information">
+      <h3 class="no-margin">{{pub.user}}</h3>
+      <h5 class="no-margin">Hace {{$ctrl.doesHowMuch(pub.createDate)}} minutos</h5>
+      <article>
+        {{pub.publication}}
+      </article>
+      <section class="actions">
+        <button class="button no-padding">Reaccionar</button>
+        <button class="button no-padding">Comentar</button>
+      </section>
+    </section>
+    <section class="row status">
+      <div class="width-6 reactions">
+        <span class="blue"></span>
+        <span class="red"></span>
+        <span class="yellow"></span>
+      </div>
+      <div class="width-6 align-right comments">3 Comentarios</div>
+    </section>
+  </section>
+</section>
