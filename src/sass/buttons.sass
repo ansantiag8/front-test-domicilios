@@ -1,3 +1,5 @@
+$breakpoint: 992px
+
 .buttons
   border-top: 1px solid #eaeaea
   padding: 10px 0
@@ -8,11 +10,17 @@
   border: none
   border-radius: 3px
   color: #fff
+  cursor: pointer
   font-size: 14px
   padding: 5px 15px
 
-.information .actions button
+.actions button
   background: none
+  border-radius: 0
   color: #2dcc70
   font-size: 14px
-  margin-right: 32px
+  margin-right: 0
+  padding: 12px 0
+  @media (min-width: $breakpoint)
+    margin-right: 32px
+    padding: 0

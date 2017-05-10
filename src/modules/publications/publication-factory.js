@@ -5,6 +5,9 @@ let factory = function ($resource) {
     query: {
       method: 'GET',
       isArray: true
+    },
+    update: {
+      method: 'PUT'
     }
   })
 }

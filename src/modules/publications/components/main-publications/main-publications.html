@@ -5,7 +5,7 @@
 
 <section class="publications align-absolute ca-horizontal">
   <section class="card new-publication">
-    <form>
+    <form ng-submit="$ctrl.publicate()">
       <fieldset>
         <div class="field">
           <input type="text" name="" value="" placeholder="Escribe tu estado" ng-model="$ctrl.publication">
@@ -13,13 +13,13 @@
       </fieldset>
       <div class="row buttons align-right">
         <div class="width-12">
-          <button class="button" type="button" ng-click="$ctrl.publicate()">Publicar</button>
+          <button class="button" type="submit">Publicar</button>
         </div>
       </div>
     </form>
   </section>
 
-  <section ng-repeat="pub in $ctrl.publications" class="card old-publications">
+  <section id="old-publications" ng-repeat="pub in $ctrl.publications" class="card old-publications">
     <figure class="no-margin">
       <img src="../images/user.png" alt="">
     </figure>
@@ -29,16 +29,17 @@
       <article>
         {{pub.publication}}
       </article>
-      <section class="actions">
-        <button class="button no-padding">Reaccionar</button>
-        <button class="button no-padding">Comentar</button>
-      </section>
+    </section>
+    <section class="row actions">
+      <button class="button no-padding" react>Reaccionar</button>
+      <button class="button no-padding">Comentar</button>
     </section>
     <section class="row status">
       <div class="width-6 reactions">
-        <span class="blue"></span>
-        <span class="red"></span>
-        <span class="yellow"></span>
+        <span reactions ng-click="$ctrl.react(pub.id, 'blue')" ng-class="pub.myReact === 'blue' ? 'selected': '' " class="blue"></span>
+        <span reactions ng-click="$ctrl.react(pub.id, 'red')" ng-class="pub.myReact === 'red' ? 'selected': '' " class="red"></span>
+        <span reactions ng-click="$ctrl.react(pub.id, 'yellow')" ng-class="pub.myReact === 'yellow' ? 'selected': '' " class="yellow"></span>
+        <label>{{pub.reactions.length === undefined ? 0 : pub.reactions.length}}</label>
       </div>
       <div class="width-6 align-right comments">3 Comentarios</div>
     </section>

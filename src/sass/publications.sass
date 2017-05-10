@@ -1,3 +1,25 @@
+$breakpoint: 992px
+
+.actions
+  font-size: 0
+  padding-left: 0
+  @media (min-width: $breakpoint)
+    padding-left: 75px
+
+.actions button
+  border-top: 1px solid #eaeaea
+  border-bottom: none
+  box-sizing: border-box
+  width: 50%
+  @media (min-width: $breakpoint)
+    border: none
+    width: auto
+
+.actions button:last-child
+  border-left: 1px solid #eaeaea
+  @media (min-width: $breakpoint)
+    border-left: none
+
 .comments,
 .information,
 .old-publications figure,
@@ -14,6 +36,9 @@
 
 .information
   margin-left: 20px
+  width: 85%
+  @media (min-width: $breakpoint)
+    width: 90%
 
 .information article
   margin: 10px 0
@@ -49,8 +74,10 @@
 
 .status
   border-top: 1px solid #eaeaea
-  margin-top: 22px
+  margin-top: 0
   padding: 8px 0
+  @media (min-width: $breakpoint)
+    margin-top: 22px
 
 .status div
   vertical-align: middle
@@ -58,22 +85,49 @@
 .reactions
   font-size: 0
 
+.reactions label,
+.reactions span
+  vertical-align: middle
+
+.reactions label
+  color: #2dcc70
+  font-size: 14px
+  font-weight: bold
+  margin-left: 10px
+  margin-top: 2px
+
 .reactions span
   border: 2px solid #fff
   border-radius: 50%
   display: inline-block
   height: 18px
   margin-left: -11px
+  -webkit-transition: all 150ms ease-in-out
+  -moz-transition: all 150ms ease-in-out
+  -ms-transition: all 150ms ease-in-out
+  -o-transition: all 150ms ease-in-out
+  transition: all 150ms ease-in-out
   width: 18px
 
 .reactions span:first-child
   margin-left: 9px
 
-.reactions .red
-  background-color: #f45b5f
+.reactions .selected
+  border-color: #000
 
 .reactions .blue
   background-color: #438bfc
 
+.reactions .red
+  background-color: #f45b5f
+
 .reactions .yellow
   background-color: #efc21f
+
+.select-reactions span
+  cursor: pointer
+  margin-left: 11px
+
+.select-reactions span:hover
+  height: 25px
+  width:
