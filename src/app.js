@@ -1,5 +1,5 @@
 import angular from 'angular'
-import angularResource from 'angular-resource'
+import 'angular-resource'
 
 // modules
 import authentication from './modules/authentication/authentication'
@@ -9,7 +9,7 @@ import uiRouter from 'angular-ui-router' // aungular ui router debe ir de ultimo
 
 angular.module('domicilios', [
   uiRouter,
-  angularResource,
+  'ngResource',
   authentication.name,
   publications.name
 ])
